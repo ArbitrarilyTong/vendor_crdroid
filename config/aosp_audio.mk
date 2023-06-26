@@ -61,7 +61,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/notifications/ogg/Alya.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Alya.ogg \
     $(LOCAL_PATH)/notifications/ogg/Antimony.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Antimony.ogg \
     $(LOCAL_PATH)/notifications/ogg/Arcturus.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Arcturus.ogg \
-    $(LOCAL_PATH)/notifications/ogg/Argon.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Argon.ogg \
+    $(LOCAL_PATH)/notifications/ogg/ATOMS.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/ATOMS.ogg \
+    $(LOCAL_PATH)/notifications/ogg/CRYSTALS.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/CRYSTALS.ogg \
+    $(LOCAL_PATH)/notifications/ogg/FLUX.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/FLUX.ogg \
+    $(LOCAL_PATH)/notifications/ogg/GLITTER.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/GLITTER.ogg \
     $(LOCAL_PATH)/notifications/ogg/Bellatrix.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Bellatrix.ogg \
     $(LOCAL_PATH)/notifications/ogg/Beryllium.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Beryllium.ogg \
     $(LOCAL_PATH)/notifications/ogg/Capella.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Capella.ogg \
