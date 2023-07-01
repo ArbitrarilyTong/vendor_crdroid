@@ -43,11 +43,11 @@ except ImportError:
 
 DEBUG = False
 
-custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision =  "13.0"
-custom_dependencies = "crdroid.dependencies"
-org_manifest = "crdroidandroid"  # leave empty if org is provided in manifest
-org_display = "crDroid Android"  # needed for displaying
+custom_local_manifest = ".repo/local_manifests/ArbitrarilyTong.xml"
+custom_default_revision =  "ArbitrarilyTong-13.0"
+custom_dependencies = "tong.dependencies"
+org_manifest = "ArbitrarilyTong-Devices"  # leave empty if org is provided in manifest
+org_display = "ArbitrarilyTong"  # needed for displaying
 
 github_auth = None
 
@@ -122,7 +122,7 @@ def is_in_manifest(project_path):
 
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
-
+    print(lm)
     for repo in repos:
         repo_name = repo['repository']
         repo_path = repo['target_path']
@@ -162,6 +162,7 @@ def add_to_manifest(repos, fallback_branch=None):
 
     indent(lm)
     raw_xml = "\n".join(('<?xml version="1.0" encoding="UTF-8"?>',
+                         '<!-- Welcome to ArbitrarilyTong -->',
                          ElementTree.tostring(lm).decode()))
 
     f = open(custom_local_manifest, 'w')
@@ -282,15 +283,15 @@ def main():
     for repository in repositories:
         repo_name = repository['name']
 
-        if not (repo_name.startswith("android_device_") and
+        if not (repo_name.startswith("device_") and
                 repo_name.endswith("_" + device)):
             continue
         print("Found repository: %s" % repository['name'])
 
         fallback_branch = detect_revision(repository)
-        manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
+        manufacturer = repo_name.replace("device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
-        adding = [{'repository': "crdroidandroid/" + repo_name, 'target_path': repo_path}]
+        adding = [{'repository': org_manifest + "/" + repo_name, 'target_path': repo_path}]
 
         add_to_manifest(adding, fallback_branch)
 
